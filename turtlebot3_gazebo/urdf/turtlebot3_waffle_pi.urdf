@@ -254,4 +254,32 @@
   </joint>
   <link name="camera_rgb_optical_frame"/>
 
+
+
+  <!-- Add camera depth -->
+  <joint name="camera_depth_joint" type="fixed">
+    <origin xyz="0.003 0.011 0.009" rpy="-1.57 0 -1.57"/>
+    <parent link="camera_link"/>
+    <child link="camera_depth_link"/>
+  </joint>
+  <link name="camera_depth_link">
+    <!-- Add visual and collision elements if needed -->
+  </link>
+  <!-- Add camera depth optical frame -->
+
+  <link name="camera_depth_optical_frame">
+   <!--  <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>-->
+  </link>
+  <joint name="camera_depth_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.57 0 -1.57"/>
+    <parent link="camera_depth_link"/>
+    <child link="camera_depth_optical_frame"/>
+  </joint>
+
 </robot>
