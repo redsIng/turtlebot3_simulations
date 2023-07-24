@@ -138,9 +138,9 @@
           <scan>
             <horizontal>
               <samples>360</samples>
-              <resolution>1.000000</resolution>
+              <resolution>1.00000000000</resolution>
               <min_angle>0.000000</min_angle>
-              <max_angle>6.280000</max_angle>
+              <max_angle>6.283185307179586</max_angle>
             </horizontal>
           </scan>
           <range>
@@ -161,15 +161,6 @@
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
           <frame_name>base_scan</frame_name>
-
-          <!-- Setting max and min range of libgazebo_ros_ray_sensor-->
-          <min_range>0.12</min_range>
-          <max_range>6.0</max_range>
-          <samples>360</samples>
-          <gaussian_noise>
-            <range>0.01</range>
-            <intensity>0.03</intensity>
-          </gaussian_noise>
         </plugin>
       </sensor>
     </link>
